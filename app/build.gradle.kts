@@ -1,11 +1,21 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("androidx.navigation.safeargs.kotlin")
+    id("kotlin-kapt")
+
+    //TAMBAHKAN PLUGIN
+
 }
 
 android {
     namespace = "com.ubaya.todoapp"
     compileSdk = 33
+
+    //ON VIEWBINDING
+    buildFeatures {
+        viewBinding = true
+    }
 
     defaultConfig {
         applicationId = "com.ubaya.todoapp"
@@ -44,4 +54,14 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
+
+
+    //TAMBAHKAN INI UNTUK NAVIGATION DAN ROOM
+    implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
+    implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
+    implementation("androidx.room:room-runtime:2.5.1")
+    implementation("androidx.room:room-ktx:2.5.1")
+    kapt("androidx.room:room-compiler:2.5.1")
+
+
 }

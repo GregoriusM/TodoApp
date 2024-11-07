@@ -10,7 +10,7 @@ plugins {
 
 android {
     namespace = "com.ubaya.todoapp"
-    compileSdk = 33
+    compileSdk = 34
 
     //ON VIEWBINDING
     buildFeatures {
